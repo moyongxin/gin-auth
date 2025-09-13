@@ -4,6 +4,9 @@
 使用 SQLite 作为数据库
 密码使用 bcrypt 哈希后存储
 
+## build tags
+`production` - 启用生产环境设置（如严格的 CORS）
+
 ## 环境变量
 - `ADDR`: 监听地址（包括端口），默认 `:8080`
 - `JWT_SECRET`: 用于签发 JWT 的密钥，默认 `default-jwt-secret`

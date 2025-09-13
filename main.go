@@ -7,6 +7,7 @@ import (
 	"os"
 
 	"github.com/gin-gonic/gin"
+	_ "github.com/mattn/go-sqlite3"
 )
 
 var db *sql.DB
@@ -57,6 +58,7 @@ func main() {
 	defer db.Close()
 
 	r := gin.Default()
+	r.Use(corsMiddleware())
 
 	// simple example, no rate limiting, no captcha
 	// no email verification, no password reset
